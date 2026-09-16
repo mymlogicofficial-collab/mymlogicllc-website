@@ -1,0 +1,531 @@
+/* ============================================
+   MYM LOGIC LLC — WEBSITE STYLES
+   ============================================ */
+
+/* Color Variables */
+:root {
+    --electric-baby-blue: #7FDBFF;
+    --scion-purple-haze: #7D3C98;
+    --deep-navy: #001F3F;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--white);
+    background-color: var(--black);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', 'Orbitron', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+a {
+    color: var(--electric-baby-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+/* ============================================
+   HERO HEADER (FULL SCREEN)
+   ============================================ */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--electric-baby-blue);
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(127, 219, 255, 0.3);
+    letter-spacing: 0.1em;
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-tagline {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    color: var(--scion-purple-haze);
+    font-weight: 600;
+    line-height: 1.4;
+    text-shadow: 0 0 15px rgba(125, 60, 152, 0.4);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   COMPANY OVERVIEW SECTION
+   ============================================ */
+
+.company-overview {
+    background-color: var(--deep-navy);
+    color: var(--white);
+    padding: 80px 20px;
+}
+
+.company-overview .container {
+    max-width: 900px;
+}
+
+.company-overview h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 30px;
+    color: var(--electric-baby-blue);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.company-overview h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric-baby-blue), transparent);
+}
+
+.company-overview p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.company-overview h3 {
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: var(--electric-baby-blue);
+}
+
+.doctrine {
+    font-style: italic;
+    color: var(--scion-purple-haze);
+    font-size: 1.15rem;
+    border-left: 4px solid var(--electric-baby-blue);
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+/* ============================================
+   WHAT'S IN THE LAB (EDITABLE SECTION)
+   ============================================ */
+
+.lab-section {
+    background-color: var(--black);
+    color: var(--electric-baby-blue);
+    padding: 80px 20px;
+    border-top: 2px solid var(--scion-purple-haze);
+    border-bottom: 2px solid var(--scion-purple-haze);
+}
+
+.lab-section .container {
+    max-width: 900px;
+}
+
+.lab-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 50px;
+    color: var(--electric-baby-blue);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.lab-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric-baby-blue), transparent);
+}
+
+.lab-item {
+    background: rgba(125, 60, 152, 0.1);
+    border-left: 4px solid var(--scion-purple-haze);
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.lab-item:hover {
+    background: rgba(125, 60, 152, 0.2);
+    transform: translateX(10px);
+}
+
+.lab-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.lab-item p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lab-meta {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.status {
+    font-size: 0.95rem;
+    color: var(--scion-purple-haze);
+    font-weight: 600;
+}
+
+.demo-link {
+    color: var(--electric-baby-blue);
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.demo-link:hover {
+    border-bottom-color: var(--electric-baby-blue);
+    color: var(--white);
+}
+
+/* ============================================
+   STUDIO & CREATIVE DIVISIONS SECTION
+   ============================================ */
+
+.studios-section {
+    background-color: var(--deep-navy);
+    color: var(--white);
+    padding: 80px 20px;
+}
+
+.studios-section .container {
+    max-width: 900px;
+}
+
+.studios-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 50px;
+    color: var(--electric-baby-blue);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.studios-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--electric-baby-blue), transparent);
+}
+
+.studios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.studio-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.studio-accent {
+    color: var(--electric-baby-blue);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    text-shadow: 0 0 10px rgba(127, 219, 255, 0.5);
+}
+
+.studio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--white);
+}
+
+.studio-text strong {
+    color: var(--electric-baby-blue);
+    font-weight: 700;
+}
+
+/* ============================================
+   FOOTER IMAGE SECTION
+   ============================================ */
+
+.footer-image-section {
+    background-color: var(--black);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-image-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(127, 219, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.footer-image:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   FOOTER CONTACT BLOCK
+   ============================================ */
+
+.footer {
+    background-color: var(--black);
+    color: var(--electric-baby-blue);
+    padding: 60px 20px;
+    border-top: 2px solid var(--scion-purple-haze);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-left h3, .footer-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--white);
+}
+
+.footer-left p, .footer-right p {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.footer-left a, .footer-right a {
+    color: var(--electric-baby-blue);
+    transition: color 0.3s ease;
+}
+
+.footer-left a:hover, .footer-right a:hover {
+    color: var(--white);
+}
+
+.donate-btn {
+    display: inline-block;
+    background-color: var(--scion-purple-haze);
+    color: var(--white);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border: 2px solid var(--scion-purple-haze);
+}
+
+.donate-btn:hover {
+    background-color: transparent;
+    color: var(--scion-purple-haze);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+
+    .company-overview,
+    .lab-section,
+    .studios-section {
+        padding: 50px 20px;
+    }
+
+    .hero {
+        height: 80vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-tagline {
+        font-size: 1rem;
+    }
+
+    .lab-item {
+        padding: 20px;
+    }
+
+    .footer-image {
+        max-width: 100%;
+    }
+
+    .studio-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 15px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-tagline {
+        font-size: 0.85rem;
+    }
+
+    .company-overview h2,
+    .lab-section h2,
+    .studios-section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .lab-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .donate-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .footer-image {
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
