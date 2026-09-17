@@ -110,9 +110,10 @@ a:hover {
     color: var(--scion-purple-haze);
     font-weight: 600;
     line-height: 1.4;
-    text-shadow: 0 0 15px rgba(125, 60, 152, 0.4);
+    text-shadow: 0 0 8px rgba(125, 60, 152, 0.6), 0 0 15px rgba(125, 60, 152, 0.4);
     animation: fadeInUp 1.2s ease-out;
 }
+
 
 @keyframes fadeInDown {
     from {
