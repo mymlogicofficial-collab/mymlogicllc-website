@@ -79,13 +79,7 @@ a:hover {
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.65);
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.45); /* was 0.65 */
 }
 
 .hero-content {
@@ -106,12 +100,7 @@ a:hover {
 }
 
 .hero-tagline {
-    font-size: clamp(1rem, 3vw, 1.8rem);
-    color: var(--scion-purple-haze);
-    font-weight: 600;
-    line-height: 1.4;
-    text-shadow: 0 0 8px rgba(125, 60, 152, 0.6), 0 0 15px rgba(125, 60, 152, 0.4);
-    animation: fadeInUp 1.2s ease-out;
+    text-shadow: 0 0 10px rgba(125, 60, 152, 0.7), 0 0 20px rgba(125, 60, 152, 0.5);
 }
 
 
