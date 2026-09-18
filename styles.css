@@ -79,7 +79,7 @@ a:hover {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.45); /* was 0.65 */
+    background: rgba(0, 0, 0, 0.45); /* lighten overlay */
 }
 
 .hero-content {
@@ -100,9 +100,15 @@ a:hover {
 }
 
 .hero-tagline {
-    text-shadow: 0 0 10px rgba(125, 60, 152, 0.7), 0 0 20px rgba(125, 60, 152, 0.5);
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    color: #9b59b6; /* richer purple */
+    font-weight: 600;
+    line-height: 1.4;
+    text-shadow:
+        0 0 6px rgba(155, 89, 182, 0.8),
+        0 0 12px rgba(155, 89, 182, 0.6),
+        0 0 24px rgba(155, 89, 182, 0.4);
 }
-
 
 @keyframes fadeInDown {
     from {
