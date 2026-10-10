@@ -10,14 +10,26 @@
 
 <body>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION WITH COMMERCIAL -->
     <section class="hero">
         <img src="hero-bg.jpg" alt="Background" class="hero-bg">
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
+
+            <div class="commercial-wrapper">
+                <video class="commercial-video" controls autoplay muted playsinline>
+                    <source src="mym-commercial.mp4" type="video/mp4">
+                </video>
+            </div>
+
             <h1 class="hero-title">MYM LOGIC LLC</h1>
-            <h2 class="hero-tagline">Brand Identity. Creative Systems. AI‑Assisted Prototypes.</h2>
+            <h2 class="hero-tagline">Better Chances. Better Odds.</h2>
+
+            <div class="hero-cta">
+                <a href="#emergency" class="cta-btn">Emergency Deadline Help</a>
+                <a href="#brandkits" class="cta-btn secondary">Start Your Project</a>
+            </div>
         </div>
     </section>
 
@@ -40,18 +52,42 @@
         </div>
     </section>
 
+    <!-- EMERGENCY SERVICES SECTION -->
+    <section id="emergency" class="emergency-section">
+        <div class="container">
+            <h2>Emergency Brand & Deadline Solutions</h2>
+            <p>
+                Built for speed and precision. MYM Logic delivers rapid identity builds, overnight pitch decks, 
+                last‑minute commercial concepts, and one‑stop design solutions when time is running out.
+            </p>
+
+            <ul class="emergency-list">
+                <li>Overnight pitch decks</li>
+                <li>1–2 hour brand identity builds</li>
+                <li>Rapid logo + color + voice fixes</li>
+                <li>Last‑minute commercial concepts</li>
+                <li>Demo‑first app previews</li>
+                <li>Crisis branding for broken businesses</li>
+            </ul>
+
+            <a href="tel:5099002468" class="cta-btn">Call for Emergency Help</a>
+        </div>
+    </section>
+
     <!-- SERVICES SECTION -->
     <section class="services-section">
         <div class="container">
             <h2>What We Do</h2>
 
-            <div class="service-item">
-                <h3>Brand Starter Kit</h3>
+            <div class="service-item" id="brandkits">
+                <h3>Hand‑Tailored Brand Starter Kit</h3>
                 <p>
-                    A complete visual identity package for small businesses, creators, and founders. Includes logo, color palette, 
-                    typography, social graphics, and a one‑page brand identity sheet.
+                    A fast, intuitive identity package built from your brand’s energy. Includes logo, color palette, 
+                    typography, voice guide, social graphics, and a one‑page identity sheet. Direction decided in the 
+                    first 15 seconds — delivered within hours.
                 </p>
-                <a href="#" class="cta-btn">Build My Brand</a>
+                <p class="pricing">Starting at $150–$300</p>
+                <a href="#" class="cta-btn">Start Your Brand Kit</a>
             </div>
 
             <div class="service-item">
@@ -61,6 +97,31 @@
                     and a guided video walkthrough.
                 </p>
                 <a href="#" class="cta-btn">Prototype My Idea</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEMO-FIRST APPS SECTION -->
+    <section class="demoapps-section">
+        <div class="container">
+            <h2>Demo‑First Apps</h2>
+            <p>
+                Instant‑load tools built to prove capability fast. Try the demo, see it work, buy the full version. 
+                No subscriptions. No friction.
+            </p>
+
+            <div class="demoapp-item">
+                <h3>codeME — Portable Coder</h3>
+                <p>Translate code, generate snippets, and test ideas instantly.</p>
+                <a href="codeme.html" class="cta-btn">Try Demo</a>
+                <p class="pricing">$10 Full Version</p>
+            </div>
+
+            <div class="demoapp-item">
+                <h3>Fortune Spheres Mini</h3>
+                <p>A micro‑game built on animated sphere logic.</p>
+                <a href="spheres.html" class="cta-btn">Try Demo</a>
+                <p class="pricing">$10 Full Version</p>
             </div>
         </div>
     </section>
@@ -132,9 +193,10 @@
         <div class="container">
             <h2>About the Founder</h2>
             <p>
-                MYM Logic LLC was founded by Sterling Lawson, a customer service and product support professional with a background in branding, 
-                creative development, and AI‑assisted prototyping. Sterling combines hands‑on customer experience with system thinking, 
-                troubleshooting, and creative execution to build solutions that are both visually strong and technically grounded.
+                MYM Logic LLC was founded by Sterling Lawson, a rapid‑identity architect specializing in fast‑direction 
+                branding, emergency deadline solutions, and demo‑first product prototypes. Sterling combines customer‑facing 
+                clarity with technical system thinking to deliver brand identity, commercial concepts, and working demos 
+                at high speed and high precision.
             </p>
         </div>
     </section>
@@ -160,15 +222,15 @@
             <div class="footer-right">
                 <h3>Support the Lab</h3>
                 <a href="#" class="donate-btn">DONATE</a>
+
+                <div class="footer-cta">
+                    <a href="#brandkits" class="cta-btn">Start Your Project</a>
+                    <a href="#emergency" class="cta-btn secondary">Emergency Help</a>
+                    <a href="#" class="cta-btn secondary">Demo‑First Apps</a>
+                </div>
             </div>
         </div>
     </footer>
 
 </body>
 </html>
-
-
-</body>
-</html>
-
-
