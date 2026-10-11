@@ -32,16 +32,23 @@
   <section class="contact-section">
     <div class="container">
 
-      <form class="contact-form" action="#" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
+      <div data-fs-success style="display:none; color: #00ff00; margin-bottom: 20px;">Thanks for your submission!</div>
+      <div data-fs-error style="display:none; color: #ff0000; margin-bottom: 20px;">Oops! There was a problem submitting your form.</div>
 
-        <input type="email" name="email" placeholder="Your Email" required>
+      <form id="my-form" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" id="name" data-fs-field required />
+        <span data-fs-error="name"></span>
 
-        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Pitch Deck, Emergency, Demo)" required>
+        <input type="email" name="email" placeholder="Your Email" id="email" data-fs-field required />
+        <span data-fs-error="email"></span>
 
-        <textarea name="message" placeholder="Tell me about your project, timeline, and any style requirements." required></textarea>
+        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Pitch Deck, Emergency, Demo)" id="subject" data-fs-field required />
+        <span data-fs-error="subject"></span>
 
-        <button type="submit">Send Message</button>
+        <textarea name="message" placeholder="Tell me about your project, timeline, and any style requirements." id="message" data-fs-field required></textarea>
+        <span data-fs-error="message"></span>
+
+        <button type="submit" data-fs-submit-btn>Send Message</button>
       </form>
 
       <div style="margin-top:40px; text-align:center; color:var(--electric-baby-blue);">
@@ -53,6 +60,19 @@
 
     </div>
   </section>
+
+  <script>
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+    formspree("initForm", {
+      formElement: "#my-form",
+      formId: "xjygrjay",
+    });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
