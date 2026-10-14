@@ -5,6 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Demo‑First Apps — MYM Logic LLC</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .demo-app-container {
+      margin: 40px 0;
+      border: 2px solid #6366f1;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1f2937;
+    }
+
+    .demo-app-header {
+      background: linear-gradient(135deg, #4f46e5, #1f2937);
+      padding: 20px;
+      border-bottom: 2px solid #6366f1;
+    }
+
+    .demo-app-header h3 {
+      margin: 0 0 10px 0;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .demo-app-header p {
+      margin: 5px 0;
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    .demo-frame {
+      width: 100%;
+      height: 700px;
+      border: none;
+    }
+
+    .demo-app-footer {
+      background: #1f2937;
+      border-top: 1px solid #6366f1;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .demo-app-footer p {
+      margin: 0;
+      color: #9ca3af;
+    }
+
+    .demo-app-footer .cta-btn {
+      margin: 0;
+    }
+
+    .app-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .app-card {
+      padding: 20px;
+      background: #1f2937;
+      border: 2px solid #4b5563;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .app-card:hover {
+      border-color: #6366f1;
+      background: #2d3748;
+    }
+
+    .app-card.active {
+      border-color: #6366f1;
+      background: #4f46e5;
+    }
+
+    .app-card h4 {
+      margin: 0 0 10px 0;
+      color: #fff;
+    }
+
+    .app-card p {
+      margin: 0;
+      color: #9ca3af;
+      font-size: 14px;
+    }
+
+    .app-card .price {
+      margin-top: 10px;
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .demo-frame {
+        height: 500px;
+      }
+
+      .demo-app-footer {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="main-nav">
@@ -21,25 +126,111 @@
 
   <section class="page-header">
     <h2>Demo‑First Apps</h2>
-    <p>Instant‑load tools built to prove capability fast.</p>
+    <p>Try them now. Buy them instantly. No friction.</p>
   </section>
 
   <section class="demo-page">
     <div class="container">
-      <div class="demoapp-item">
-        <h3>codeME — Portable Coder</h3>
-        <p>Translate code, generate snippets, and test ideas instantly.</p>
-        <a href="codeme.html" class="cta-btn">Try Demo</a>
-        <p class="pricing">$10 Full Version</p>
+
+      <!-- APP SELECTOR -->
+      <div class="app-selector">
+        <div class="app-card active" onclick="switchApp('fidgepop')">
+          <h4>FidgePOP</h4>
+          <p>Interactive fidget toys & stress relief</p>
+          <div class="price">$4.99</div>
+        </div>
+        <div class="app-card" onclick="switchApp('codeme')">
+          <h4>CodeME</h4>
+          <p>Intelligent code translator (20+ languages)</p>
+          <div class="price">$9.99</div>
+        </div>
+        <div class="app-card" onclick="switchApp('fortune-spheres')">
+          <h4>Fortune Spheres Manic</h4>
+          <p>Random character fortune teller (8 characters)</p>
+          <div class="price">$9.99</div>
+        </div>
       </div>
 
-      <div class="demoapp-item">
-        <h3>Fortune Spheres Manic</h3>
-        <p>A micro‑game built on animated sphere logic.</p>
-        <a href="spheres.html" class="cta-btn">Try Demo</a>
-        <p class="pricing">$10 Full Version</p>
+      <!-- DEMO APPS -->
+      <div id="fidgepop-app" class="demo-app-container">
+        <div class="demo-app-header">
+          <h3>FidgePOP</h3>
+          <p>Interactive fidget toys & stress relief simulator</p>
+        </div>
+        <iframe id="fidgepop-frame" class="demo-frame" src="http://localhost:5173/fidgepop-1.0.0/" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; fullscreen; gyroscope; magnetometer; microphone; midi; payment; usb; xr-spatial-tracking"></iframe>
+        <div class="demo-app-footer">
+          <p>Try the demo above. Buy the full version for $4.99</p>
+          <button class="cta-btn" onclick="buyApp('fidgepop', 'FidgePOP', 4.99)">Buy Now</button>
+        </div>
       </div>
+
+      <div id="codeme-app" class="demo-app-container" style="display: none;">
+        <div class="demo-app-header">
+          <h3>CodeME</h3>
+          <p>Intelligent code translator — ENG ↔ CODE with 20+ language support</p>
+        </div>
+        <iframe id="codeme-frame" class="demo-frame" src="http://localhost:5173/codeme-1.0.0/" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; fullscreen; gyroscope; magnetometer; microphone; midi; payment; usb; xr-spatial-tracking"></iframe>
+        <div class="demo-app-footer">
+          <p>Try the demo above. Buy the full version for $9.99</p>
+          <button class="cta-btn" onclick="buyApp('codeme', 'CodeME', 9.99)">Buy Now</button>
+        </div>
+      </div>
+
+      <div id="fortune-spheres-app" class="demo-app-container" style="display: none;">
+        <div class="demo-app-header">
+          <h3>Fortune Spheres Manic</h3>
+          <p>Random character fortune teller with 8 unique personalities and manic mode surprises</p>
+        </div>
+        <iframe id="fortune-spheres-frame" class="demo-frame" src="http://localhost:5173/fortune-spheres-manic-1.0.0/" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; fullscreen; gyroscope; magnetometer; microphone; midi; payment; usb; xr-spatial-tracking"></iframe>
+        <div class="demo-app-footer">
+          <p>Try the demo above. Buy the full version for $9.99</p>
+          <button class="cta-btn" onclick="buyApp('fortune-spheres', 'Fortune Spheres Manic', 9.99)">Buy Now</button>
+        </div>
+      </div>
+
     </div>
   </section>
+
+  <script>
+    function switchApp(appId) {
+      // Hide all apps
+      document.getElementById('fidgepop-app').style.display = 'none';
+      document.getElementById('codeme-app').style.display = 'none';
+      document.getElementById('fortune-spheres-app').style.display = 'none';
+
+      // Deactivate all cards
+      document.querySelectorAll('.app-card').forEach(card => card.classList.remove('active'));
+
+      // Show selected app
+      document.getElementById(appId + '-app').style.display = 'block';
+
+      // Activate card
+      event.target.closest('.app-card').classList.add('active');
+    }
+
+    async function buyApp(appId, appName, price) {
+      try {
+        const response = await fetch('http://localhost:4242/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            projectName: `${appName} - Full Version`,
+            projectId: `${appId}-full-` + Date.now(),
+            clientEmail: `${appId}-buyer@demo.local`,
+            amount: Math.round(price * 100),
+            paymentType: 'product',
+            totalProjectValue: Math.round(price * 100),
+          }),
+        });
+
+        if (!response.ok) throw new Error('Checkout failed');
+
+        const { url } = await response.json();
+        if (url) window.location.href = url;
+      } catch (err) {
+        alert('Payment setup failed: ' + err.message);
+      }
+    }
+  </script>
 </body>
 </html>
