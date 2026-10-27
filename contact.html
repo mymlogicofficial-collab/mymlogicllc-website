@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — MYM Logic LLC</title>
+  <title>Book Now & Contact — MYM Logic LLC</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,46 +16,54 @@
       <li><a href="brandkits.html">Brand Kits</a></li>
       <li><a href="emergency.html">Emergency Help</a></li>
       <li><a href="demo.html">Demo‑First Apps</a></li>
+      <li><a href="mcstudio.html">MC Studio</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="pitchdeck.html">Pitch Decks</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Book Now / Contact</a></li>
     </ul>
   </nav>
 
   <!-- PAGE HEADER -->
   <section class="page-header">
-    <h2>Contact MYM Logic LLC</h2>
-    <p>Reach out for brand kits, emergency help, demos, or project direction.</p>
+    <h2>Book Now & Contact MYM Logic LLC</h2>
+    <p>Direct booking for brand kits, emergency deadline fixes, Fiverr gigs, and charity donations.</p>
   </section>
 
-  <!-- CONTACT FORM SECTION -->
+  <!-- BOOKING & CONTACT SECTION -->
   <section class="contact-section">
     <div class="container">
 
-      <div data-fs-success style="display:none; color: #00ff00; margin-bottom: 20px;">Thanks for your submission!</div>
-      <div data-fs-error style="display:none; color: #ff0000; margin-bottom: 20px;">Oops! There was a problem submitting your form.</div>
+      <!-- QUICK BOOKING CTAS -->
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+        <a href="brandkits.html" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Book Brand Starter Kit ($150)</a>
+        <a href="https://fiverr.com" target="_blank" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white;">Order On Fiverr</a>
+        <a href="tel:5099002468" class="cta-btn">Call Direct: 509‑900‑2468</a>
+      </div>
+
+      <div data-fs-success style="display:none; color: #00ff00; margin-bottom: 20px; font-weight: bold; text-align: center;">Thanks for your submission! We will get back to you shortly.</div>
+      <div data-fs-error style="display:none; color: #ff0000; margin-bottom: 20px; text-align: center;">Oops! There was a problem submitting your form.</div>
 
       <form id="my-form" class="contact-form">
         <input type="text" name="name" placeholder="Your Name" id="name" data-fs-field required />
         <span data-fs-error="name"></span>
 
-        <input type="email" name="email" placeholder="Your Email" id="email" data-fs-field required />
+        <input type="email" name="email" placeholder="Your Email Address" id="email" data-fs-field required />
         <span data-fs-error="email"></span>
 
-        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Pitch Deck, Emergency, Demo)" id="subject" data-fs-field required />
+        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Pitch Deck, Fiverr Order, Charity Donation)" id="subject" data-fs-field required />
         <span data-fs-error="subject"></span>
 
-        <textarea name="message" placeholder="Tell me about your project, timeline, and any style requirements." id="message" data-fs-field required></textarea>
+        <textarea name="message" placeholder="Tell us about your project, target deadline, or charity donation inquiry..." id="message" data-fs-field required></textarea>
         <span data-fs-error="message"></span>
 
-        <button type="submit" data-fs-submit-btn>Send Message</button>
+        <button type="submit" data-fs-submit-btn>🚀 Send Message / Book Project</button>
       </form>
 
-      <div style="margin-top:40px; text-align:center; color:var(--electric-baby-blue);">
-        <p>Phone: 509‑900‑2468</p> 
-        <p>Email: mymlogic@outlook.com</p>
-        <p>Hours: Tue–Fri, 6AM–10AM & 10PM–2AM</p>
-        <p>Emergency support available when possible.</p>
+      <!-- DIRECT CONTACT DETAILS -->
+      <div style="margin-top:50px; text-align:center; color:var(--electric-baby-blue);">
+        <h3 style="color: var(--white); margin-bottom: 10px;">Direct Contact Information</h3>
+        <p style="font-size: 1.1rem; margin-bottom: 6px;">Phone: <strong>509‑900‑2468</strong></p>
+        <p style="font-size: 1.1rem; margin-bottom: 6px;">Email: <strong>mymlogic@outlook.com</strong></p>
+        <p>Hours: Tue–Fri, 6AM–10AM & 10PM–2AM (Emergency 24/7 support available)</p>
       </div>
 
     </div>
