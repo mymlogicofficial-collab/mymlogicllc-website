@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder Admin — Client Vault & Project Creator | MYM Logic LLC</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: #040914; color: white; }
+    .admin-card {
+      max-width: 650px;
+      margin: 40px auto;
+      background: #001F3F;
+      border: 2px solid var(--electric-baby-blue);
+      border-radius: 12px;
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="vault.html">Client Vault</a></li>
+      <li><a href="vault-admin.html" class="active">Admin Portal</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h2>Founder Admin Portal — Project Creator & Release Vault</h2>
+    <p>Upload new client demos, set custom prices, generate access keys, and manage project releases.</p>
+  </section>
+
+  <div class="container">
+    <div class="admin-card">
+      <h3 style="color: var(--electric-baby-blue); font-size: 1.6rem; margin-bottom: 15px;">Create & Park New Client Demo</h3>
+
+      <form id="adminProjectForm" class="contact-form" onsubmit="event.preventDefault(); saveProject();">
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Client / Company Name</label>
+        <input type="text" id="clientNameInput" placeholder="e.g. Apex Remodeling LLC" required />
+
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Project Name</label>
+        <input type="text" id="projectNameInput" placeholder="e.g. Bathroom Remodel Visualizer App" required />
+
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Custom Price ($)</label>
+        <input type="text" id="customPriceInput" placeholder="e.g. $2,500.00" required />
+
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Generate Client Access Passcode</label>
+        <input type="text" id="passcodeKeyInput" placeholder="e.g. APEX-2025" required />
+
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Demo Embed URL or File Path</label>
+        <input type="text" id="demoUrlInput" placeholder="https://thinkmym.com/mcstudio or path" required />
+
+        <label style="color: var(--electric-baby-blue); font-weight: bold;">Source Package ZIP Download URL</label>
+        <input type="text" id="zipDownloadInput" placeholder="https://thinkmym.com/downloads/apex_source.zip" required />
+
+        <button type="submit" class="cta-btn" style="width: 100%; margin-top: 15px; cursor: pointer; background: #ffb800; border-color: #ffb800; color: #000; font-weight: bold;">
+          🚀 Park Client Project & Activate Access Key
+        </button>
+      </form>
+
+      <div id="adminSuccessMsg" style="display: none; margin-top: 20px; background: rgba(46,230,166,0.2); border: 1px solid #2ee6a6; padding: 15px; border-radius: 6px; color: #2ee6a6; text-align: center;">
+        ✅ Client Project Parked Successfully! Give the client their access key to view their demo and pay for release.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function saveProject() {
+      const name = document.getElementById('projectNameInput').value;
+      const price = document.getElementById('customPriceInput').value;
+      const key = document.getElementById('passcodeKeyInput').value.trim().toUpperCase();
+
+      document.getElementById('adminSuccessMsg').style.display = 'block';
+      document.getElementById('adminSuccessMsg').innerHTML = `
+        ✅ Project <strong>${name}</strong> (${price}) created!<br>
+        <strong>Client Access Key:</strong> <span style="font-size: 1.2rem; text-decoration: underline;">${key}</span><br>
+        Send client link: <strong>https://thinkmym.com/vault.html</strong>
+      `;
+    }
+  </script>
+</body>
+</html>
