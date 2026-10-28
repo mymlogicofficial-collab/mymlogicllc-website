@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>intuiTech Translator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>intuiTech</h1>
+      <span class="sub">code translator</span>
+    </header>
+
+    <div class="controls">
+      <div class="mode-row">
+        <button class="mode-btn active" data-mode="eng-to-code">ENG → CODE</button>
+        <button class="mode-btn" data-mode="code-to-eng">CODE → ENG</button>
+        <button class="mode-btn" data-mode="ask">ASK</button>
+      </div>
+      <div class="lang-row">
+        <select id="langSelect">
+          <option value="not-sure">not sure</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="TypeScript">TypeScript</option>
+          <option value="Python">Python</option>
+          <option value="Rust">Rust</option>
+          <option value="Go">Go</option>
+          <option value="C">C</option>
+          <option value="C++">C++</option>
+          <option value="C#">C#</option>
+          <option value="Java">Java</option>
+          <option value="Kotlin">Kotlin</option>
+          <option value="Swift">Swift</option>
+          <option value="Ruby">Ruby</option>
+          <option value="PHP">PHP</option>
+          <option value="Dart">Dart</option>
+          <option value="Lua">Lua</option>
+          <option value="R">R</option>
+          <option value="SQL">SQL</option>
+          <option value="Bash">Bash</option>
+          <option value="HTML/CSS">HTML/CSS</option>
+          <option value="Solidity">Solidity</option>
+          <option value="Assembly">Assembly</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="workspace">
+      <div class="panel input-panel">
+        <div class="panel-head">
+          <span class="panel-label" id="inputLabel">input — english</span>
+          <button class="sm-btn" id="pasteBtn" title="Paste from clipboard">paste</button>
+          <button class="sm-btn" id="clearInputBtn" title="Clear input">clear</button>
+        </div>
+        <textarea id="inputArea" placeholder="type or paste here..." spellcheck="false"></textarea>
+      </div>
+
+      <div class="panel output-panel">
+        <div class="panel-head">
+          <span class="panel-label" id="outputLabel">output — code</span>
+          <button class="sm-btn" id="copyBtn" title="Copy output">copy</button>
+          <button class="sm-btn" id="exportBtn" title="Export as file">export</button>
+        </div>
+        <pre id="outputArea"><code id="outputCode"></code></pre>
+      </div>
+    </div>
+
+    <div class="action-row">
+      <button id="translateBtn" class="go-btn">translate</button>
+      <span id="status" class="status"></span>
+    </div>
+
+    <div class="terminal-section">
+      <div class="panel-head">
+        <span class="panel-label">mini terminal</span>
+        <button class="sm-btn" id="runBtn" title="Run output code">run</button>
+        <button class="sm-btn" id="clearTermBtn" title="Clear terminal">clear</button>
+      </div>
+      <div id="terminal" class="terminal"><span class="term-placeholder">output appears here after run...</span></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

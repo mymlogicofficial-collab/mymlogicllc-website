@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --border: #252525;
+  --text: #c8c8c8;
+  --text-dim: #666;
+  --accent: #3a7;
+  --accent-dim: #2a5;
+  --err: #c44;
+}
+
+body {
+  font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px 12px;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.controls {
+  margin-bottom: 12px;
+}
+
+.mode-row {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.mode-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.mode-btn:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+.mode-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #1a2a1f;
+}
+
+.lang-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+select {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  background: #111;
+}
+
+.panel-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.sm-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 2px 8px;
+  font-family: inherit;
+  font-size: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.sm-btn:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 10px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: none;
+  height: 220px;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.output-panel pre {
+  padding: 10px;
+  height: 220px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.output-panel code {
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.go-btn {
+  background: var(--accent);
+  border: none;
+  color: #0e0e0e;
+  padding: 8px 28px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+}
+
+.go-btn:hover {
+  background: var(--accent-dim);
+}
+
+.go-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.status {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.status.error {
+  color: var(--err);
+}
+
+.terminal-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.terminal {
+  padding: 10px;
+  height: 140px;
+  overflow: auto;
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.term-placeholder {
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+.term-line {
+  display: block;
+  color: var(--text);
+}
+
+.term-err {
+  color: var(--err);
+}
+
+.term-info {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  #app {
+    padding: 10px 8px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  textarea,
+  .output-panel pre {
+    height: 160px;
+  }
+
+  .mode-btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  header h1 {
+    font-size: 14px;
+  }
+}
