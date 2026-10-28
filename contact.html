@@ -17,6 +17,7 @@
       <li><a href="emergency.html">Emergency Help</a></li>
       <li><a href="demo.html">Demo‑First Apps</a></li>
       <li><a href="mcstudio.html">MC Studio</a></li>
+      <li><a href="vault.html">Client Vault</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="contact.html" class="active">Book Now / Contact</a></li>
     </ul>
@@ -25,7 +26,7 @@
   <!-- PAGE HEADER -->
   <section class="page-header">
     <h2>Book Now & Contact MYM Logic LLC</h2>
-    <p>Direct booking for brand kits, emergency deadline fixes, Fiverr gigs, and charity donations.</p>
+    <p>Direct booking for brand kits, Turnkey AI Engines, emergency deadline fixes, Fiverr orders, and charity donations.</p>
   </section>
 
   <!-- BOOKING & CONTACT SECTION -->
@@ -34,7 +35,7 @@
 
       <!-- QUICK BOOKING CTAS -->
       <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
-        <a href="brandkits.html" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Book Brand Starter Kit ($150)</a>
+        <a href="brandkits.html" class="cta-btn" style="background: #ffb800; border-color: #ffb800; color: #000; font-weight: bold;">Book Brand Starter Kit ($150)</a>
         <a href="https://fiverr.com" target="_blank" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white;">Order On Fiverr</a>
         <a href="tel:5099002468" class="cta-btn">Call Direct: 509‑900‑2468</a>
       </div>
@@ -49,7 +50,7 @@
         <input type="email" name="email" placeholder="Your Email Address" id="email" data-fs-field required />
         <span data-fs-error="email"></span>
 
-        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Pitch Deck, Fiverr Order, Charity Donation)" id="subject" data-fs-field required />
+        <input type="text" name="subject" placeholder="Project Type (Brand Kit, Turnkey AI Engine, Pitch Deck, Charity Donation)" id="subject" data-fs-field required />
         <span data-fs-error="subject"></span>
 
         <textarea name="message" placeholder="Tell us about your project, target deadline, or charity donation inquiry..." id="message" data-fs-field required></textarea>
@@ -70,6 +71,28 @@
   </section>
 
   <script>
+    // Auto-prefill subject and message based on incoming URL query parameters
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const subjectInput = document.getElementById('subject');
+      const messageInput = document.getElementById('message');
+
+      if (params.get('package') === 'saas_engine') {
+        if (subjectInput) subjectInput.value = 'Order: Turnkey AI SaaS Platform Engine ($2,999.99)';
+        if (messageInput) messageInput.value = 'I am interested in ordering the Turnkey AI SaaS Platform Engine ($2,999.99) for my business. Please contact me with project details.';
+      } else if (params.get('buy') === 'codeme') {
+        if (subjectInput) subjectInput.value = 'License Purchase: codeME Portable Coder ($9.99)';
+      } else if (params.get('buy') === 'spheres') {
+        if (subjectInput) subjectInput.value = 'License Purchase: Fortune Spheres Manic ($9.99)';
+      } else if (params.get('buy') === 'fidgepop') {
+        if (subjectInput) subjectInput.value = 'License Purchase: FidgePOP Simulator ($4.99)';
+      } else if (params.get('charity') === 'homeforaday') {
+        if (subjectInput) subjectInput.value = 'Charity Donation / Inquiry: Home for a Day';
+      } else if (params.get('charity') === '7pencil') {
+        if (subjectInput) subjectInput.value = 'Charity Donation / Inquiry: #7 Pencil';
+      }
+    });
+
     window.formspree =
       window.formspree ||
       function () {
