@@ -18,172 +18,300 @@
             <li><a href="demo.html">Demo‑First Apps</a></li>
             <li><a href="mcstudio.html">MC Studio</a></li>
             <li><a href="vault.html">Client Vault</a></li>
-            <li><a href="contact.html">Book Now / Contact</a></li>
+            <li><a href="contact.html">Contact / Book Consultation</a></li>
         </ul>
     </nav>
     <!-- END NAV -->
 
-    <!-- HERO SECTION — FULLSCREEN CINEMATIC VIDEO -->
-    <section class="hero">
+    <!-- HERO SECTION (SHOWROOM APPROACH) -->
+    <section class="hero" style="min-height: 85vh; display: grid; place-items: center; text-align: center; background: radial-gradient(circle at center, rgba(0,31,63,0.8), #020712); padding: 80px 20px;">
+        <div class="container" style="max-width: 900px;">
+            <h1 class="hero-title" style="font-size: 3.5rem; font-weight: 800; color: var(--white); margin-bottom: 10px; letter-spacing: -0.02em;">MYM LOGIC LLC</h1>
+            <h2 class="hero-tagline" style="font-size: 1.6rem; color: var(--electric-baby-blue); margin-bottom: 20px; font-weight: 600;">Better Chances. Better Odds.</h2>
+            <p style="font-size: 1.25rem; color: var(--electric-baby-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 15px;">Design. Development. AI Systems.</p>
+            <p style="font-size: 1.1rem; line-height: 1.7; color: #d1d5db; max-width: 750px; margin: 0 auto 35px;">
+                Creating brands, digital experiences, creative tools, and business platforms that prove value before purchase.
+            </p>
 
-        <video class="hero-bg" autoplay muted loop playsinline>
-            <source src="assets/mym-commercial.mp4" type="video/mp4">
-        </video>
-
-        <div class="hero-overlay"></div>
-
-        <div class="hero-content">
-            <h1 class="hero-title">MYM LOGIC LLC</h1>
-            <h2 class="hero-tagline">Better Chances. Better Odds.</h2>
-
-            <div class="hero-cta" style="margin-top: 25px;">
-                <a href="brandkits.html" class="cta-btn">Book Your Brand Kit</a>
-                <a href="#book-now" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Book Now / Hire Us</a>
+            <div class="hero-cta" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="#featured-work" class="cta-btn" style="background: var(--electric-baby-blue); color: #000; font-weight: 800;">Explore Our Work</a>
+                <a href="#live-demos" class="cta-btn" style="background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800;">Try Live Demos</a>
             </div>
         </div>
     </section>
 
-    <!-- COMPANY OVERVIEW -->
-    <section class="company-overview">
-        <div class="container">
-            <h2>Who We Are</h2>
-            <p>
-                MYM Logic LLC is a fast‑direction design studio specializing in brand identity, rapid pitch decks,
-                and clean, high‑impact visuals built for real deadlines. We focus on clarity, structure, and strong
-                presentation — the essentials that make your brand look confident and ready for business.
-            </p>
+    <!-- SECTION 1: OUR DIVISIONS -->
+    <section style="background: #0a1120; padding: 80px 20px; border-top: 1px solid rgba(127,219,255,0.15);">
+        <div class="container" style="max-width: 1100px;">
+            <h2 style="text-align: center; font-size: 2.5rem; color: var(--white); margin-bottom: 50px;">Our Divisions</h2>
 
-            <h3>Our Approach</h3>
-            <p class="doctrine">
-                Straightforward, fast, and precise. We identify your brand’s tone quickly and build around it with
-                clean design, clear messaging, and visuals that actually work in the real world.
-            </p>
-        </div>
-    </section>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
 
-    <!-- BOOK NOW / DIRECT ADVERTISING & FIVERR SECTION -->
-    <section id="book-now" style="background: #060c18; padding: 70px 20px; border-top: 2px solid var(--electric-baby-blue); border-bottom: 2px solid var(--electric-baby-blue);">
-        <div class="container" style="max-width: 900px; text-align: center;">
-            <h2 style="font-size: 2.5rem; color: var(--electric-baby-blue); margin-bottom: 15px;">Book Now & Hire MYM Logic LLC</h2>
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
-                Need overnight branding, a 2-hour pitch deck, or a turnkey AI SaaS platform built fast? Book us directly or find us on Fiverr.
-            </p>
+                <!-- SE CUSTOMS -->
+                <div style="background: #0d1527; border: 2px solid var(--electric-baby-blue); padding: 30px; border-radius: 12px; display: flex; flex-direction: column;">
+                    <span style="color: var(--electric-baby-blue); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">SE Customs</span>
+                    <h3 style="color: var(--white); font-size: 1.6rem; margin: 8px 0 12px;">Graphics & Digital Design Division</h3>
+                    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        The creative design arm of MYM Logic delivering professional branding and visual assets.
+                    </p>
+                    <div style="margin-bottom: 25px; font-size: 0.88rem; color: #d1d5db; line-height: 1.8;">
+                        <strong>Services:</strong> Logos, Flyers, Menus, Business Cards, Posters, Brochures, Social Media Graphics, Advertising Materials, Album Artwork, Brand Kits.
+                    </div>
+                    <div style="margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="brandkits.html" class="cta-btn" style="padding: 10px 16px; font-size: 0.85rem;">View Portfolio</a>
+                        <a href="https://fiverr.com" target="_blank" class="cta-btn" style="padding: 10px 16px; font-size: 0.85rem; background: #1dbf73; border-color: #1dbf73; color: white;">Order on Fiverr</a>
+                    </div>
+                </div>
 
-            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="brandkits.html" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Book Brand Starter Kit ($150)</a>
-                <a href="https://fiverr.com" target="_blank" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white;">Order On Fiverr</a>
-                <a href="tel:5099002468" class="cta-btn">Call Direct: 509‑900‑2468</a>
+                <!-- MYM LOGIC -->
+                <div style="background: #0d1527; border: 2px solid var(--scion-purple-haze); padding: 30px; border-radius: 12px; display: flex; flex-direction: column;">
+                    <span style="color: var(--scion-purple-haze); font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">MYM Logic</span>
+                    <h3 style="color: var(--white); font-size: 1.6rem; margin: 8px 0 12px;">Development & Platform Division</h3>
+                    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        Custom digital solutions, SaaS applications, and robust business tools built for performance.
+                    </p>
+                    <div style="margin-bottom: 25px; font-size: 0.88rem; color: #d1d5db; line-height: 1.8;">
+                        <strong>Services:</strong> Websites, SaaS Platforms, AI Tools, Client Portals, Booking Systems, Internal Business Tools, Accessibility Projects.
+                    </div>
+                    <div style="margin-top: auto;">
+                        <a href="vault.html" class="cta-btn" style="padding: 10px 16px; font-size: 0.85rem;">View Projects</a>
+                    </div>
+                </div>
+
+                <!-- O.D.D.S. -->
+                <div style="background: #0d1527; border: 2px solid #ffb800; padding: 30px; border-radius: 12px; display: flex; flex-direction: column;">
+                    <span style="color: #ffb800; font-weight: 800; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;">O.D.D.S.</span>
+                    <h3 style="color: var(--white); font-size: 1.6rem; margin: 8px 0 12px;">AI Creative Suite</h3>
+                    <p style="color: #9ca3af; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        AI-powered creative workflows built to help users develop branding, marketing assets, graphics, and content.
+                    </p>
+                    <div style="margin-bottom: 25px; font-size: 0.88rem; color: #d1d5db; line-height: 1.8;">
+                        <strong>Workflows:</strong> Intelligent image diffusion, AI music mastering, multi-language translation, and automated asset generation.
+                    </div>
+                    <div style="margin-top: auto;">
+                        <a href="demo.html" class="cta-btn" style="padding: 10px 16px; font-size: 0.85rem; background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800;">Launch O.D.D.S.</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- DEMO-FIRST APPS PRODUCT SUITE -->
-    <section class="demoapps-section" style="background: #001F3F; padding: 80px 20px;">
-        <div class="container" style="max-width: 950px;">
-            <h2>Demo‑First App & Platform Suite</h2>
-            <p style="margin-bottom: 30px;">
-                Instant‑load tools built to prove capability fast. Try the live demo, see it work, buy the full version.
-                No subscriptions. No friction.
+    <!-- SECTION 2: FEATURED WORK -->
+    <section id="featured-work" style="background: #060c18; padding: 90px 20px;">
+        <div class="container" style="max-width: 1100px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 15px;">Featured Work</h2>
+            <p style="color: #9ca3af; max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Visual first. Portfolio pieces, brand kits, websites, marketing designs, and platform screenshots built to impress.
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div class="demoapp-item">
-                    <h3>MC Studio — AI Music Platform</h3>
-                    <p>AI Track Generator, Vocal Recorder & Spotify Radio Mastering.</p>
-                    <p class="pricing" style="color: #ffb800; font-weight: bold; margin: 10px 0;">Champ Tier: Free • Champ Deux Pro: $9.99/mo</p>
-                    <a href="demo.html" class="cta-btn">Try Demo & Subscribe</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px;">
+                <div style="background: #0d1527; border: 1px solid rgba(127,219,255,0.2); border-radius: 10px; overflow: hidden; padding: 20px; text-align: left;">
+                    <h3 style="color: var(--electric-baby-blue); margin-bottom: 8px;">Brand Identity & Kits</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 15px;">Complete logo systems, typography guidelines, and social asset suites.</p>
+                    <a href="brandkits.html" style="color: #ffb800; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Explore Brand Kits →</a>
                 </div>
-
-                <div class="demoapp-item">
-                    <h3>codeME — Portable Coder</h3>
-                    <p>Translate code, generate snippets, and test ideas across 20+ languages.</p>
-                    <p class="pricing" style="color: var(--electric-baby-blue); font-weight: bold; margin: 10px 0;">$9.99 Lifetime License</p>
-                    <a href="demo.html" class="cta-btn">Try Demo & Buy ($9.99)</a>
+                <div style="background: #0d1527; border: 1px solid rgba(127,219,255,0.2); border-radius: 10px; overflow: hidden; padding: 20px; text-align: left;">
+                    <h3 style="color: var(--electric-baby-blue); margin-bottom: 8px;">SaaS & Platform Portals</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 15px;">Custom client vaults, booking emulators, and high-performance web apps.</p>
+                    <a href="vault.html" style="color: #ffb800; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Explore Client Vault →</a>
                 </div>
-
-                <div class="demoapp-item">
-                    <h3>Fortune Spheres Manic</h3>
-                    <p>A micro‑game built on animated sphere logic and 8 personality characters.</p>
-                    <p class="pricing" style="color: var(--electric-baby-blue); font-weight: bold; margin: 10px 0;">$9.99 Lifetime License</p>
-                    <a href="demo.html" class="cta-btn">Try Demo & Buy ($9.99)</a>
+                <div style="background: #0d1527; border: 1px solid rgba(127,219,255,0.2); border-radius: 10px; overflow: hidden; padding: 20px; text-align: left;">
+                    <h3 style="color: var(--electric-baby-blue); margin-bottom: 8px;">AI Creative Tooling</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 15px;">Interactive demos like MC Studio, O.D.D.S. GURU, and Fortune Spheres.</p>
+                    <a href="demo.html" style="color: #ffb800; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Explore Demos →</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- TURNKEY AI PLATFORM ENGINE HIGHLIGHT ($2,999.99) -->
-            <div style="margin-top: 40px; background: radial-gradient(circle at top, rgba(255,184,0,0.15), #060e1f); border: 2px solid #ffb800; padding: 32px; border-radius: 12px; text-align: center;">
-                <span style="background: #ffb800; color: #000; font-weight: 800; padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; text-transform: uppercase;">FLAGSHIP TURNKEY ENTERPRISE ENGINE</span>
-                <h3 style="color: #ffb800; font-size: 2rem; margin: 12px 0 6px;">Turnkey AI SaaS Platform Engine — $2,999.99</h3>
-                <p style="color: #e2e8f0; font-size: 1.05rem; max-width: 800px; margin: 0 auto 20px; line-height: 1.6;">
-                    Turn your business concept or service into a custom AI-powered SaaS, design assistant, or booking emulator in 24–48 hours.
-                    <em>Example: A Bathroom Remodel Emulator that gets homeowners in the design mindset and automatically books paid consultation appointments.</em> Complete revenue engine architecture tailored to your exact business needs.
+    <!-- SECTION 3: TRY LIVE DEMOS -->
+    <section id="live-demos" style="background: #001F3F; padding: 90px 20px; border-top: 2px solid var(--electric-baby-blue);">
+        <div class="container" style="max-width: 1100px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 15px;">Experience The Products Yourself</h2>
+            <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Try our live working demonstration apps before making any commitments.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-bottom: 40px;">
+
+                <div style="background: #0a1120; border: 2px solid var(--electric-baby-blue); padding: 24px; border-radius: 12px; display: flex; flex-direction: column; text-align: left;">
+                    <h3 style="color: var(--electric-baby-blue); font-size: 1.35rem; margin-bottom: 8px;">O.D.D.S. GURU</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 20px;">AI Design Suite & Creative Workspace.</p>
+                    <a href="demo.html" class="cta-btn" style="margin-top: auto; text-align: center;">Launch Demo</a>
+                </div>
+
+                <div style="background: #0a1120; border: 2px solid #ffb800; padding: 24px; border-radius: 12px; display: flex; flex-direction: column; text-align: left;">
+                    <h3 style="color: #ffb800; font-size: 1.35rem; margin-bottom: 8px;">MC Studio</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 20px;">Music Creation & Audio Mastering Platform.</p>
+                    <a href="mcstudio.html" class="cta-btn" style="margin-top: auto; text-align: center; background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800;">Launch Demo</a>
+                </div>
+
+                <div style="background: #0a1120; border: 2px solid var(--scion-purple-haze); padding: 24px; border-radius: 12px; display: flex; flex-direction: column; text-align: left;">
+                    <h3 style="color: #c084fc; font-size: 1.35rem; margin-bottom: 8px;">Fortune Spheres</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 20px;">Interactive Personality & Fortune Experience (Optimized Readability).</p>
+                    <a href="demo.html" class="cta-btn" style="margin-top: auto; text-align: center;">Launch Demo</a>
+                </div>
+
+                <div style="background: #0a1120; border: 2px solid #2a385c; padding: 24px; border-radius: 12px; display: flex; flex-direction: column; text-align: left;">
+                    <h3 style="color: var(--white); font-size: 1.35rem; margin-bottom: 8px;">codeME & FidgePOP</h3>
+                    <p style="color: #9ca3af; font-size: 0.9rem; margin-bottom: 20px;">Portable Coder & Interactive Fidget Suite.</p>
+                    <a href="demo.html" class="cta-btn" style="margin-top: auto; text-align: center;">Launch Demo</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: O.D.D.S. AI DESIGN SUITE SUBSCRIPTION & PATHS -->
+    <section style="background: #060c18; padding: 90px 20px;">
+        <div class="container" style="max-width: 1000px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 10px;">Your AI Creative Department</h2>
+            <p style="color: #9ca3af; max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Three paths to fit your workflow: DIY User, Done-With-You, or Done-For-You.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; text-align: left; margin-bottom: 60px;">
+
+                <!-- DIY: FREE -->
+                <div style="background: #0d1527; border: 1px solid rgba(127,219,255,0.2); border-radius: 12px; padding: 30px;">
+                    <h3 style="color: var(--electric-baby-blue);">DIY User (Free)</h3>
+                    <p style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">$0</p>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin-bottom: 20px;">3 Full Generations Daily • Logos, Flyers, Menus, Social Assets</p>
+                    <a href="demo.html" class="cta-btn" style="width: 100%; text-align: center;">Get Started Free</a>
+                </div>
+
+                <!-- DIY: PRO -->
+                <div style="background: #0d1527; border: 2px solid #ffb800; border-radius: 12px; padding: 30px; position: relative;">
+                    <span style="position: absolute; top: -12px; right: 20px; background: #ffb800; color: #000; font-size: 0.7rem; font-weight: 800; padding: 3px 10px; border-radius: 10px;">POPULAR</span>
+                    <h3 style="color: #ffb800;">DIY User (Pro)</h3>
+                    <p style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">$9.99<span style="font-size: 0.9rem; font-weight: normal;">/mo</span></p>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin-bottom: 20px;">50 Gens/Month • Priority Queue • Saved Projects • Watermark-Free Downloads • Brand Profiles • Creative Workspace</p>
+                    <a href="demo.html" class="cta-btn" style="width: 100%; text-align: center; background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800;">Upgrade to Pro</a>
+                </div>
+
+                <!-- DIY: ANNUAL -->
+                <div style="background: #0d1527; border: 1px solid var(--scion-purple-haze); border-radius: 12px; padding: 30px;">
+                    <h3 style="color: #c084fc;">DIY User (Annual)</h3>
+                    <p style="font-size: 1.8rem; font-weight: bold; margin: 10px 0;">$100<span style="font-size: 0.9rem; font-weight: normal;">/year</span></p>
+                    <p style="font-size: 0.85rem; color: #9ca3af; margin-bottom: 20px;">Everything in Pro + 2 Months Free & Early Feature Access</p>
+                    <a href="demo.html" class="cta-btn" style="width: 100%; text-align: center;">Go Annual ($100)</a>
+                </div>
+
+            </div>
+
+            <!-- CONSULTATION BOX (DONE-WITH-YOU) -->
+            <div style="background: #0a1120; border: 2px solid var(--electric-baby-blue); padding: 35px; border-radius: 12px; text-align: center; margin-bottom: 40px;">
+                <h3 style="color: var(--electric-baby-blue); font-size: 1.8rem; margin-bottom: 10px;">Need Help Refining Your Results?</h3>
+                <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 20px; font-size: 1.05rem;">
+                    Get expert guidance with a <strong>Design Consultation with SE Customs</strong>. Perfect for brand direction, design review, marketing guidance, creative strategy, and asset cleanup.
+                </p>
+                <a href="mailto:mymlogic@outlook.com?subject=Design%20Consultation%20Request" class="cta-btn" style="background: var(--electric-baby-blue); color: #000; font-weight: 800;">Book Consultation (mymlogic@outlook.com)</a>
+            </div>
+
+            <!-- DONE-FOR-YOU -->
+            <div style="background: #0a1120; border: 2px solid #1dbf73; padding: 35px; border-radius: 12px; text-align: center;">
+                <h3 style="color: #1dbf73; font-size: 1.8rem; margin-bottom: 10px;">Done-For-You: Hire SE Customs</h3>
+                <p style="color: #d1d5db; max-width: 700px; margin: 0 auto 20px; font-size: 1.05rem;">
+                    Say goodbye to DIY. Let our professional design team build your logos, flyers, menus, ads, brand kits, and marketing assets from scratch.
                 </p>
                 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                    <a href="contact.html?package=saas_engine" class="cta-btn" style="background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800;">🚀 Order Turnkey AI Engine ($2,999.99)</a>
-                    <a href="vault.html" class="cta-btn">🔐 Client Demo & Release Vault</a>
+                    <a href="contact.html" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white; font-weight: 800;">Book Direct Consultation</a>
+                    <a href="https://fiverr.com" target="_blank" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white; font-weight: 800;">Order Through Fiverr</a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- STUDIOS & CREATIVE DIVISIONS -->
-    <section class="studios-section">
-        <div class="container">
-            <h2>Studios & Creative Divisions</h2>
-
-            <div class="studios-list">
-                <div class="studio-item">
-                    <span class="studio-accent">◆</span>
-                    <p class="studio-text"><strong>O.D.D.S. GURU</strong> — One-stop Digital Design Suite</p>
-                </div>
-
-                <div class="studio-item">
-                    <span class="studio-accent">◆</span>
-                    <p class="studio-text"><strong>MC Studio</strong> — AI Music Creation Platform (<a href="mcstudio.html" style="color: #ffb800; text-decoration: underline;">Launch MC Studio</a>)</p>
-                </div>
-
-                <div class="studio-item">
-                    <span class="studio-accent">◆</span>
-                    <p class="studio-text"><strong>ADDS</strong> — Analytics & Data Design Studio</p>
-                </div>
-
-                <div class="studio-item">
-                    <span class="studio-accent">◆</span>
-                    <p class="studio-text"><strong>KINDS Creative</strong> — Creative‑assistive media</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CHARITY & SUPPORT THE LAB SECTION -->
-    <section class="lab-section" style="background: #020712; padding: 80px 20px;">
-        <div class="container" style="max-width: 950px;">
-            <h2 style="color: var(--electric-baby-blue);">Support the Lab & Our Community Charities</h2>
-            <p style="margin-bottom: 40px; color: #fff; opacity: 0.9; font-size: 1.1rem;">
-                Beyond client work, MYM Logic LLC supports initiatives that empower creators and break down barriers.
+    <!-- SECTION 5: LIKE THE DEMOS? OWN ONE (PRICING) -->
+    <section style="background: #001F3F; padding: 90px 20px; border-top: 2px solid var(--electric-baby-blue);">
+        <div class="container" style="max-width: 1000px; text-align: center;">
+            <h2 style="font-size: 2.5rem; color: var(--white); margin-bottom: 10px;">Like the Demos? Own One.</h2>
+            <p style="color: #9ca3af; max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Deploy proven MYM demo systems for your own business or platform. Clean, fixed, predictable pricing.
             </p>
 
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+
+                <div style="background: #0a1120; border: 2px solid #ffb800; padding: 35px; border-radius: 12px; text-align: left; display: flex; flex-direction: column;">
+                    <span style="color: #ffb800; font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Turnkey System</span>
+                    <h3 style="color: var(--white); font-size: 1.8rem; margin: 8px 0 4px;">Custom Platform Build</h3>
+                    <p style="font-size: 2.2rem; font-weight: bold; color: #ffb800; margin-bottom: 15px;">$2,500 <span style="font-size: 0.9rem; font-weight: normal; color: #9ca3af;">Flat Rate</span></p>
+                    <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 20px;">Estimated Completion: <strong>2 Business Days</strong></p>
+                    <ul style="color: #d1d5db; font-size: 0.9rem; line-height: 1.8; padding-left: 20px; margin-bottom: 25px;">
+                        <li>Complete Branding & Design</li>
+                        <li>Platform Deployment</li>
+                        <li>Packaging & Core Customization</li>
+                        <li>Full Source Delivery</li>
+                    </ul>
+                    <a href="contact.html?package=platform_build" class="cta-btn" style="margin-top: auto; background: #ffb800; border-color: #ffb800; color: #000; font-weight: 800; text-align: center;">Order Platform ($2,500)</a>
+                </div>
+
+                <div style="background: #0a1120; border: 2px solid var(--electric-baby-blue); padding: 35px; border-radius: 12px; text-align: left; display: flex; flex-direction: column;">
+                    <span style="color: var(--electric-baby-blue); font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Rescue & Setup</span>
+                    <h3 style="color: var(--white); font-size: 1.8rem; margin: 8px 0 4px;">Migration / Install / Debugging</h3>
+                    <p style="font-size: 2.2rem; font-weight: bold; color: var(--electric-baby-blue); margin-bottom: 15px;">$500 <span style="font-size: 0.9rem; font-weight: normal; color: #9ca3af;">Flat Rate</span></p>
+                    <p style="color: #9ca3af; font-size: 0.95rem; margin-bottom: 20px;">Fast-track setup, debugging, and environment rescue.</p>
+                    <ul style="color: #d1d5db; font-size: 0.9rem; line-height: 1.8; padding-left: 20px; margin-bottom: 25px;">
+                        <li>Existing Server Migration</li>
+                        <li>Environment Setup & Installation</li>
+                        <li>Configuration & Troubleshooting</li>
+                        <li>Launch Support</li>
+                    </ul>
+                    <a href="contact.html?package=migration" class="cta-btn" style="margin-top: auto; text-align: center;">Order Migration ($500)</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: FIVERR SERVICES -->
+    <section style="background: #060c18; padding: 70px 20px;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <h2 style="font-size: 2.2rem; color: var(--white); margin-bottom: 15px;">Need Design Work Done For You?</h2>
+            <p style="color: #9ca3af; font-size: 1.05rem; line-height: 1.6; margin-bottom: 25px;">
+                Order professional logos, flyers, menus, brand kits, marketing graphics, and social content directly through our trusted marketplace partner.
+            </p>
+            <a href="https://fiverr.com" target="_blank" class="cta-btn" style="background: #1dbf73; border-color: #1dbf73; color: white; font-weight: 800; padding: 14px 28px; font-size: 1.1rem;">Visit Fiverr Store</a>
+        </div>
+    </section>
+
+    <!-- COMPANY DESCRIPTION & PHILOSOPHY -->
+    <section style="background: #020712; padding: 80px 20px; border-top: 1px solid rgba(127,219,255,0.15);">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <h2 style="color: var(--electric-baby-blue); margin-bottom: 20px;">About MYM Logic LLC</h2>
+            <p style="color: #d1d5db; font-size: 1.15rem; line-height: 1.8;">
+                MYM Logic LLC is a creative technology company that combines graphic design, brand development, software engineering, AI-powered workflows, and business platform development into practical tools and services. Through SE Customs, MYM provides professional design services. Through O.D.D.S., MC Studio, Fortune Spheres, and other demonstration platforms, MYM showcases working examples of its technology before clients commit to a project.
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 7: COMMUNITY & CHARITIES -->
+    <section class="lab-section" style="background: #020712; padding: 60px 20px;">
+        <div class="container" style="max-width: 950px;">
+            <h2 style="color: var(--electric-baby-blue); text-align: center; margin-bottom: 30px;">Community & Charities</h2>
+
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px;">
-                <!-- CHARITY 1: HOME FOR A DAY -->
                 <div class="lab-item" style="border-left-color: #ffb800; background: rgba(255, 184, 0, 0.08);">
                   <h3 style="color: #ffb800;">🏠 Home for a Day</h3>
-                  <p>
-                    A non-profit initiative dedicated to helping displaced, overworked, and struggling creators get home for a week (6 days) with full lodging and a grocery stipend to refresh, create, and rebuild.
+                  <p style="color: #d1d5db; font-size: 0.95rem;">
+                    A non-profit initiative dedicated to helping displaced and struggling creators get home for a week with full lodging and a grocery stipend to refresh, create, and rebuild.
                   </p>
                   <div class="lab-meta">
                     <span class="status" style="color: #ffb800;">Official Charity Partner</span>
-                    <a href="contact.html?charity=homeforaday" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Donate / Learn More</a>
+                    <a href="contact.html?charity=homeforaday" class="cta-btn" style="background: #ffb800; border-color: #ffb800; padding: 8px 14px; font-size: 0.8rem;">Learn More</a>
                   </div>
                 </div>
 
-                <!-- CHARITY 2: #7 PENCIL -->
                 <div class="lab-item" style="border-left-color: var(--electric-baby-blue); background: rgba(127, 219, 255, 0.08);">
                   <h3 style="color: var(--electric-baby-blue);">✏️ #7 Pencil</h3>
-                  <p>
-                    A charity that aims to take the loneliness out of mental health. Empowering creators and individuals to make their mark on mental health awareness through creative expression and community support.
+                  <p style="color: #d1d5db; font-size: 0.95rem;">
+                    A charity that aims to take the loneliness out of mental health. Empowering creators and individuals to make their mark on mental health awareness through creative expression.
                   </p>
                   <div class="lab-meta">
                     <span class="status" style="color: var(--electric-baby-blue);">Official Charity Partner</span>
-                    <a href="contact.html?charity=7pencil" class="cta-btn">Donate / Support #7 Pencil</a>
+                    <a href="contact.html?charity=7pencil" class="cta-btn" style="padding: 8px 14px; font-size: 0.8rem;">Support #7 Pencil</a>
                   </div>
                 </div>
             </div>
@@ -193,24 +321,21 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
-
             <div class="footer-left">
-                <h3>Contact & Booking</h3>
+                <h3>MYM Logic LLC</h3>
                 <p>Phone: 509‑900‑2468</p>
                 <p>Email: mymlogic@outlook.com</p>
                 <p>Hours: Tue–Fri, 6AM–10AM & 10PM–2AM</p>
-                <p>Emergency 24/7 branding & pitch deck support available.</p>
             </div>
-
             <div class="footer-right">
-                <h3>Book or Order</h3>
-                <div class="footer-cta" style="display: flex; flex-direction: column; gap: 10px; align-items: flex-end;">
-                    <a href="brandkits.html" class="cta-btn" style="background: #ffb800; border-color: #ffb800;">Start Brand Kit</a>
-                    <a href="#book-now" class="cta-btn">Book Now</a>
-                    <a href="vault.html" class="cta-btn">Client Vault</a>
+                <h3>Quick Links</h3>
+                <div class="footer-cta" style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
+                    <a href="brandkits.html" style="color: var(--electric-baby-blue); text-decoration: none;">Brand Kits</a>
+                    <a href="demo.html" style="color: var(--electric-baby-blue); text-decoration: none;">Demo‑First Apps</a>
+                    <a href="mcstudio.html" style="color: var(--electric-baby-blue); text-decoration: none;">MC Studio</a>
+                    <a href="vault.html" style="color: var(--electric-baby-blue); text-decoration: none;">Client Vault</a>
                 </div>
             </div>
-
         </div>
     </footer>
 
